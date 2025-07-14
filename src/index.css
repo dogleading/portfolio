@@ -128,12 +128,12 @@
     }
   }
 
-  .textglow {
+  .text-glow {
     @apply relative;
     text-shadow: 0 0 10px rgba(167, 139, 255, 0.5);
   }
 
-  .cardhover {
+  .card-hover {
     @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
   }
 
