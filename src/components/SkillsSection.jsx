@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 const skills = [
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 85, category: "frontend" },
-  { name: "React", level: 80, category: "frontend" },
-  { name: "Node.js", level: 85, category: "backend" },
-  { name: "Express", level: 80, category: "backend" },
-  { name: "PostgreSQL", level: 85, category: "backend" },
-  { name: "Git", level: 90, category: "tools" },
-  { name: "GitHub", level: 90, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
-  { name: "TypeScript", level: 80, category: "frontend" },
-  { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Next.js", level: 90, category: "frontend" },
-  { name: "Docker", level: 80, category: "tools" },
-  { name: "AWS", level: 80, category: "tools" },
-  { name: "MongoDB", level: 80, category: "backend" },
+  { name: "HTML/CSS", category: "frontend" },
+  { name: "JavaScript", category: "frontend" },
+  { name: "React", category: "frontend" },
+  { name: "Node.js", category: "backend" },
+  { name: "Express", category: "backend" },
+  { name: "PostgreSQL", category: "backend" },
+  { name: "Git", category: "tools" },
+  { name: "GitHub", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "TypeScript", category: "frontend" },
+  { name: "Tailwind CSS", category: "frontend" },
+  { name: "Next.js", category: "frontend" },
+  { name: "Docker", category: "tools" },
+  { name: "AWS", category: "tools" },
+  { name: "MongoDB", category: "backend" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -34,7 +34,7 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+          Technologies I <span className="text-primary">Work With</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -53,26 +53,15 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-md card-hover"
+              className="bg-card p-6 rounded-lg shadow-md card-hover text-center transition-all duration-300 hover:scale-110 hover:shadow-xl group cursor-pointer"
             >
-              <div className="text-left mb-4 ">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="w-full bg-primary h-2 origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-              <div className="text-right mt-1">
-                <span className="text-xs text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              <h3 className="font-semibold text-lg text-foreground transition-all duration-300 group-hover:text-primary group-hover:[text-shadow:0_0_8px_hsl(var(--primary))]">
+                {skill.name}
+              </h3>
             </div>
           ))}
         </div>
