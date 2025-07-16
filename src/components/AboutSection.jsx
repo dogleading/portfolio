@@ -10,7 +10,7 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-foreground tracking-tight">
-              An <span className="text-primary">Introvert</span> with a passion
+              A <span className="text-primary">Developer</span> with a passion
               for <span className="text-primary">Code</span>
             </h3>
             <p className="text-lg text-muted-foreground">
@@ -27,12 +27,6 @@ export const AboutSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="custom-button">
                 Contact Me
-              </a>
-              <a
-                href="#about"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              >
-                Download Resume
               </a>
             </div>
           </div>
